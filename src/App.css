@@ -1,0 +1,511 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------comman Css---------------------*/
+.sidebar.show {
+  transition: 0.3s linear;
+  width: 64px;
+}
+
+
+.sidebar.show .sidebarLogo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-top: 50px !important;
+}
+
+
+.sidebar.show .siidebarMenu {
+  top: 0px;
+  transform: translate(50%,0);
+  right: 50%;
+}
+
+.sidebar.show .profileTypeName, .sidebar.show .profilestatus {
+  display: none;
+}
+
+
+.sidebar.show .sidebarHeader {
+  min-height: 151px;
+}
+
+.sidebar.show .sidebarMenuText,
+.sidebar.show .sidebarMenuDropDown  {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+.sidebar.show  .sidebarMenuColumn {
+  padding-left: 10px !important;
+}
+
+.sidebar.show  .sidebarMenu {
+  height: calc(100vh - 151px);
+  overflow-y: auto;
+}
+
+.mainContent.contentShow {
+  width: calc(100% - 64px);
+}
+
+.sidebar.show:hover .mainContent.contentShow {
+  width: 100%;
+}
+
+/*----------------------------------mainContent Common Css-------------------*/
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContent {
+  width: calc(100% - 240px);
+  /* width: 100vw; */
+  height: 100vh;
+  margin-right: 0;
+}
+
+.section {
+  padding: 15px;
+  height: calc(100vh - 66px);
+  overflow-y: auto; 
+  position: relative;
+}
+
+.section::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  background: url('../public/assets/back.svg') no-repeat;
+  background-size: cover;
+  top: 0;
+  height: 52%;
+  z-index: -1;
+  margin: -15px;
+  
+}
+
+.MuiDropzoneArea-icon {
+  color:'red'!important;
+  width: 51px;
+  height: 51px;
+}
+.mainHeading {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 34px;
+  color: white
+}
+
+.sectionContent {
+  background-color: rgb(255, 255, 255);
+  padding: 25px 25px;
+  border-radius: 10px;
+}
+
+.sectionContentHeader{
+  background-color: #f5e4be;
+}
+
+.sectionHeaderHeaing{
+  color: #ff9100;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: capitalize;
+}
+
+.addCategory {
+  text-decoration: none;
+  background-color: rgb(255, 145, 0);
+  color: rgb(255, 255, 255);
+  padding: 6px 16px;
+}
+
+.addCategory:hover {
+  color: rgb(255, 255, 255);
+}
+
+.catIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.catImg {
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.categoryText {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.tableEditButton {
+  width: 14px;
+  height: 14px;
+}
+
+
+/*-------------------------------Common Modal----------------------------------*/
+.modal-content {
+  width: fit-content !important;
+  margin: auto;
+}
+
+.modal-header {
+  position: relative;
+  border-bottom: 0 !important;
+}
+
+.modalTitle {
+  color: #FF9100;
+  font-size: 1.25rem;
+  /* font-family: Open Sans,sans-serif; */
+  font-weight: 600;
+  /* line-height: 1.6; */
+}
+
+.modalTitle::after{
+  left: 16px;
+  width: 60px;
+  bottom: 0;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background: #fcb532;
+}
+
+.modayBodyDetail {
+  margin-top: 30px;
+  color: #212529;
+  font-size: 16px;
+}
+.modal-body .menuList ul {
+  margin: 0px;
+  padding: 0;
+}
+.modal-body .menuList ul li{
+  width: 260px !important;
+  list-style: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.modal-body .menuList ul li a {
+  text-decoration: none;
+}
+.modal-body .roomDetailsImg {
+  width: 100%;
+  width: 100%;
+}
+.modal-body .roomDetailsImg img {
+  width: 100%;
+  height: 100%;
+}
+.modal-body .premiumPython {
+  text-align: center;
+  padding-top: 10px;
+}
+.modal-body .premiumPython .premiumHedaing {
+  font-weight: 500;
+  font-size: 16px;
+  color: #656768;
+  
+}
+.modal-body .premiumPython  .premiumPythonItem {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.modal-body .premiumPython  .premiumPythonItem li {
+  list-style: none;
+  margin: 10px 5px 0px 0px;
+}
+
+.modal-body .premiumPython  .premiumPythonItem li .premiumPythonItemImg {
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f2af20;
+  border-radius: 50px;
+
+}
+
+.modal-body .premiumPython  .premiumPythonItem li .premiumPythonItemImg img {
+  aspect-ratio: 10/10;
+  object-fit: contain;
+  object-position: center;
+}
+
+.modal-body .roomdeatils .roomdeatilsItem {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-body .roomdeatils .roomdeatilsItem li {
+  list-style: none;
+  padding: 5px 0px;
+  color: #656768;
+  font-size: 16px;
+  font-weight: normal;
+}
+.modal-body .roomdeatils .roomdeatilsItem li span {
+  font-weight: 500;
+}
+.modal-body .roomdeatils .roomdeatilsItem li:last-child {
+  padding-bottom: 0px;
+}
+
+.modal-body .roomdeatils .roomdeatilsItem li .roomdeatilsItemslist {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.modal-body .roomdeatils .roomdeatilsItem li .roomdeatilsItemslist li {
+  list-style: none;
+  padding: 0px 8px;
+  border-right: 1px solid #212529;
+  color: #656768;
+}
+.modal-body .roomdeatils .roomdeatilsItem li .roomdeatilsItemslist li:first-child{
+  padding-left: 0px;
+}
+.modal-body .roomdeatils .roomdeatilsItem li .roomdeatilsItemslist li:last-child {
+  padding-right: 0px;
+  border-right: 0px;
+}
+.modal-body .btn {
+  background: transparent;
+  border: none;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.modal-body .btn:hover {
+  background: #e9e9e9 !important;
+}
+.modal-body .cancelButton {
+  color: #656768;
+}
+.modal-body .confirmButton {
+  color: blue;
+}
+.modal-body .btn:hover.cancelButton {
+  color: #656768 !important;
+}
+.modal-body .btn:hover.confirmButton {
+  color: blue !important;
+}
+.modal-body .menuList{
+  margin: 0;
+  padding: 0;
+}
+.modal-body .menuList .menuListItem {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.modal-body .menuList .menuListItem .menuListLink {
+  text-decoration: none;
+}
+.width-50 {
+  width: 250px;
+}
+
+.modal-body .roomMove .roomMoveItems {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+}
+.modal-footer .closeButton {
+  color: #F2AF20;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+}
+.modal-footer .closeButton:hover,
+.modal-footer .closeButton:focus {
+  color: #F2AF20;
+  background: transparent;
+  border: none;
+}
+.modal-body .MuiFormControl-root{
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px 10px 0px;
+}
+.modal-body .MuiInput-root:after {
+  border-bottom: 1px solid #F2AF20 !important;
+}
+.modal-body .MuiInput-root:before {
+   border-bottom: 0px !important;
+}
+.modal-body .MuiInputLabel-root {
+  font-size: 0.9rem !important;
+  left: 10px;
+  z-index: 2;
+  top: 10px;
+}
+.modal-body .MuiOutlinedInput-notchedOutline {
+  border: 0px !important;
+}
+.modal-body .MuiInputLabel-root.Mui-focused {
+  color: #F2AF20;
+  padding: 10px !important;
+  top: 0 !important;
+  left: 0;
+}
+.modal-body .cancelBookingHeading {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+}
+.modal-body .cancelBookingList {
+  margin: 0;
+  padding: 0;
+}
+.modal-body .cancelBookingListItem {
+  list-style: none;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 16px;
+  font-weight: bold;
+}
+.modal-body .MuiSelect-select {
+  border: 0px !important;
+}
+
+
+
+
+/*-------------------------------------form Common Material Css--------------------------------*/
+.MuiOutlinedInput-notchedOutline {
+  border-width: 1px !important;
+  border-color: rgba(0,0,0,0.32) !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-bottom-color: #fcb532 !important;
+  border-color: rgba(0,0,0,0.32) !important;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #fcb532 !important;  
+}
+.MuiSelect-select {
+  background-color: transparent !important;
+}
+.MuiPickersLayout-toolbar {
+  grid-column: 2/4;
+  grid-row: 1;
+  background-color: #fcb532 !important;
+  padding-left: 50px !important;
+
+}
+.css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root.Mui-selected{
+  color:white !important
+}
+.css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root{
+  color:white !important 
+}
+.css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root.Mui-selected{
+  color:white !important 
+}
+
+
+.css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root {
+  color:white !important  
+}
+.css-umzx0k-MuiClock-pin{
+  background-color: #fcb532 !important;
+}
+.css-d0vs79-MuiClockPointer-root{
+  background-color: #fcb532 !important; 
+}
+.css-eg3pzz-MuiClockPointer-thumb{
+  border: 16px solid #fcb532 !important; 
+  background-color: #fcb532 !important; 
+}
+.css-4f0ona-MuiClock-clock{
+  background-color: white !important;
+  border: 1px solid #fcb532 !important;
+}
+.css-12t0dn4-MuiClockPointer-thumb{
+  background-color: #fcb532 !important;
+  border: 16px solid #fcb532 !important; 
+}
+.css-rdq5h4-MuiClockPointer-root{
+  background-color: #fcb532 !important; 
+}
+.css-hlj6pa-MuiDialogActions-root>:not(:first-of-type){
+  color: #fcb532;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: #fcb532 !important;
+}
+
+.css-1dqavqq-MuiStack-root,
+.css-1xhypcz-MuiStack-root,
+.css-b7u2op-MuiStack-root {
+  margin-top: -10px !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: 1.5375em !important;
+  padding: 9.5px 14px !important;
+}

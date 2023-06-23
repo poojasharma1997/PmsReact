@@ -1,0 +1,81 @@
+/*-----------------------------View ROOM------------------------*/
+.viewRoomBg {
+    margin-top: 16px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    padding: 16px !important;
+}
+.executiveRoom {
+    margin:12px;
+    box-shadow: none;
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.7em;
+    background-color: rgb(252, 181, 50);
+}
+
+.viewRoomContent {
+    padding: 12px;
+}
+
+.viewRoomContentCard {
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0px;
+    padding: 12px;
+    /* font-weight: bold; */
+    min-height: 150px;
+}
+
+.viewRoomImg {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+}
+.dormLayoutInner {
+    position: relative;
+}
+.topdormLink {
+    transition: color 150ms ease;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 120px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: rgb(128, 0, 0);
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+.bottomdormLink {
+    transition: color 150ms ease;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 120px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: rgb(33, 150, 243);
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+.topdormLink:hover {
+    color: rgb(255, 255, 255);
+}
+.bottomdormLink:hover {
+    color: rgb(255, 255, 255);
+}
+.dormImg {
+    max-width: 340px;
+   
+}

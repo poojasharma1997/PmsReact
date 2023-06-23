@@ -1,0 +1,182 @@
+.error {
+  font-size: 10px;
+  color: red;
+  padding-top: 5px;
+}
+.formBg {
+  background-image: linear-gradient(
+    -45deg,
+    #fcb532 0%,
+    #fcb532 33%,
+    #ff9100 100%
+  );
+  background-attachment: fixed;
+}
+
+.formBg::after {
+  content: "";
+  background-image: "../assets/formBg.svg";
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.form {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* .formWidth {
+  width: 50%;
+  margin: auto;
+} */
+.formSmallHeading {
+  
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #e2aa43;
+}
+.formHeading {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #e2aa43;
+}
+
+.addFormHeading {
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: bolder;
+}
+
+.fileLabel {
+  border: 2px dashed rgba(0, 0, 0, 0.12);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.38);
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.fileLabelUpload {
+  background-color: #ff9100;
+  border-radius: 50px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.uploadFiles {
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+}
+
+.uploadFiles img {
+
+}
+
+.filelableText {
+  font-size: 16px;
+}
+.fileLableImg {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.fileLableImg img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 10/10;
+  object-position: top center;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  font-size: 12px;
+  /* color: #e2aa43 !important; */
+  text-transform: capitalize;
+}
+
+.form-control,
+.form-select {
+  height: 40px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #fea41a !important;
+}
+.formButton {
+  border: none !important;
+  background: #e2aa43 !important;
+  padding: 9px 40px !important;
+}
+
+.formReset {
+  border: none !important;
+  background: #ea4335 !important;
+  padding: 9px 40px !important;
+}
+.formButton {
+  font-size: 14px !important;
+}
+.formButton:hover {
+  background: #fea41a !important;
+}
+
+.form-check {
+  color: gray;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.form-check-input {
+  border-color: #e2aa43 !important;
+}
+
+.form-check-input:checked {
+  background-color: #e2aa43 !important;
+  border-color: #e2aa43 !important;
+}
+
+.form-check-input:checked,
+.form-check-input:focus {
+  box-shadow: none !important;
+}
+
+.forgetPassword {
+  text-decoration: none;
+  color: gray;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.forgetPassword:hover {
+  color: #e2aa43;
+}
